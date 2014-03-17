@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.0-build.2458+sha.c9fbb47
+ * @license AngularJS v1.3.0-build.2459+sha.a4b70cf
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -30,8 +30,9 @@ angular.module('ngCookies', ['ng']).
    * @description
    * Provides read/write access to browser's cookies.
    *
-   * Only a simple Object is exposed and by adding or removing properties to/from
-   * this object, new cookies are created/deleted at the end of current $eval.
+   * Only a simple Object is exposed and by adding or removing properties to/from this object, new
+   * cookies are created/deleted at the end of current $eval.
+   * The object's properties can only be strings.
    *
    * Requires the {@link ngCookies `ngCookies`} module to be installed.
    *
