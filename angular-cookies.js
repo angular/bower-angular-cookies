@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.0-build.2476+sha.bc42950
+ * @license AngularJS v1.3.0-build.2477+sha.37bc5ef
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -100,12 +100,10 @@ angular.module('ngCookies', ['ng']).
         for(name in cookies) {
           value = cookies[name];
           if (!angular.isString(value)) {
-            if (angular.isDefined(lastCookies[name])) {
-              cookies[name] = lastCookies[name];
-            } else {
-              delete cookies[name];
-            }
-          } else if (value !== lastCookies[name]) {
+            value = '' + value;
+            cookies[name] = value;
+          }
+          if (value !== lastCookies[name]) {
             $browser.cookies(name, value);
             updated = true;
           }
