@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.0-build.2639+sha.accd35b
+ * @license AngularJS v1.3.0-build.2640+sha.7d1719e
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -37,18 +37,15 @@ angular.module('ngCookies', ['ng']).
    * Requires the {@link ngCookies `ngCookies`} module to be installed.
    *
    * @example
-   <example>
-     <file name="index.html">
-       <script>
-         function ExampleController($cookies) {
-           // Retrieving a cookie
-           var favoriteCookie = $cookies.myFavorite;
-           // Setting a cookie
-           $cookies.myFavorite = 'oatmeal';
-         }
-       </script>
-     </file>
-   </example>
+   *
+   * ```js
+   * function ExampleController($cookies) {
+   *   // Retrieving a cookie
+   *   var favoriteCookie = $cookies.myFavorite;
+   *   // Setting a cookie
+   *   $cookies.myFavorite = 'oatmeal';
+   * }
+   * ```
    */
    factory('$cookies', ['$rootScope', '$browser', function ($rootScope, $browser) {
       var cookies = {},
@@ -141,8 +138,6 @@ angular.module('ngCookies', ['ng']).
    * deserialized by angular's toJson/fromJson.
    *
    * Requires the {@link ngCookies `ngCookies`} module to be installed.
-   *
-   * @example
    */
    factory('$cookieStore', ['$cookies', function($cookies) {
 
