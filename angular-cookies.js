@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.2.17-build.139+sha.9f8e30f
+ * @license AngularJS v1.3.0-build.2641+sha.7a543c9
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -138,6 +138,19 @@ angular.module('ngCookies', ['ng']).
    * deserialized by angular's toJson/fromJson.
    *
    * Requires the {@link ngCookies `ngCookies`} module to be installed.
+   *
+   * @example
+   *
+   * ```js
+   * function ExampleController($cookies) {
+   *   // Put cookie
+   *   $cookieStore.put('myFavorite','oatmeal');
+   *   // Get cookie
+   *   var favoriteCookie = $cookieStore.get('myFavorite');
+   *   // Removing a cookie
+   *   $cookieStore.remove('myFavorite');
+   * }
+   * ```
    */
    factory('$cookieStore', ['$cookies', function($cookies) {
 
