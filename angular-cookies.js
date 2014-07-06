@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.2.20-build.283+sha.873acf8
+ * @license AngularJS v1.3.0-build.2884+sha.0a51a05
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -142,7 +142,7 @@ angular.module('ngCookies', ['ng']).
    * @example
    *
    * ```js
-   * function ExampleController($cookies) {
+   * function ExampleController($cookieStore) {
    *   // Put cookie
    *   $cookieStore.put('myFavorite','oatmeal');
    *   // Get cookie
