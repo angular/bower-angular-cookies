@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.1-build.3448+sha.1785251
+ * @license AngularJS v1.3.1-build.3449+sha.accb22d
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -95,7 +95,7 @@ angular.module('ngCookies', ['ng']).
         }
 
         //update all cookies updated in $cookies
-        for(name in cookies) {
+        for (name in cookies) {
           value = cookies[name];
           if (!angular.isString(value)) {
             value = '' + value;
