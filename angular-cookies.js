@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.4-build.3614+sha.42d09f1
+ * @license AngularJS v1.2.28-build.564+sha.1b9e408
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -48,7 +48,7 @@ angular.module('ngCookies', ['ng']).
    *   }]);
    * ```
    */
-   factory('$cookies', ['$rootScope', '$browser', function($rootScope, $browser) {
+   factory('$cookies', ['$rootScope', '$browser', function ($rootScope, $browser) {
       var cookies = {},
           lastCookies = {},
           lastBrowserCookies,
@@ -95,7 +95,7 @@ angular.module('ngCookies', ['ng']).
         }
 
         //update all cookies updated in $cookies
-        for (name in cookies) {
+        for(name in cookies) {
           value = cookies[name];
           if (!angular.isString(value)) {
             value = '' + value;
@@ -108,7 +108,7 @@ angular.module('ngCookies', ['ng']).
         }
 
         //verify what was actually stored
-        if (updated) {
+        if (updated){
           updated = false;
           browserCookies = $browser.cookies();
 
