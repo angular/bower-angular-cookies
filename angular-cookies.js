@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.4.0-build.3791+sha.1476810
+ * @license AngularJS v1.4.0-build.3793+sha.b8e8c55
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -165,7 +165,7 @@ angular.module('ngCookies', ['ng']).
          * Returns the value of given cookie key
          *
          * @param {string} key Id to use for lookup.
-         * @returns {Object} Deserialized cookie value.
+         * @returns {Object} Deserialized cookie value, undefined if the cookie does not exist.
          */
         get: function(key) {
           var value = $cookies[key];
