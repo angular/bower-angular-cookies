@@ -1,6 +1,7 @@
 {
   "name": "angular-cookies",
   "version": "1.3.10-build.25+sha.9b8df52",
+  "main": "./angular-cookies.js",
   "description": "AngularJS module for cookies",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
