@@ -14,20 +14,11 @@ You can install this package either with `npm` or with `bower`.
 npm install angular-cookies
 ```
 
-Add a `<script>` to your `index.html`:
-
-```html
-<script src="/node_modules/angular-cookies/angular-cookies.js"></script>
-```
-
 Then add `ngCookies` as a dependency for your app:
 
 ```javascript
-angular.module('myApp', ['ngCookies']);
+angular.module('myApp', [require('angular-cookies')]);
 ```
-
-Note that this package is not in CommonJS format, so doing `require('angular-cookies')` will
-return `undefined`.
 
 ### bower
 
