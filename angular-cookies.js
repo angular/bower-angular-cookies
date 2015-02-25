@@ -183,7 +183,7 @@ angular.module('ngCookies', ['ng']).
          * @param {Object} value Value to be stored.
          */
         put: function(key, value) {
-          $cookies[key] = angular.toJson(value);
+          $cookies[key] = angular.isString(value) ? value : angular.toJson(value);
         },
 
         /**
