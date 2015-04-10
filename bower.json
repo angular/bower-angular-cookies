@@ -4,6 +4,6 @@
   "main": "./angular-cookies.js",
   "ignore": [],
   "dependencies": {
-    "angular": "1.4.0-rc.0"
+    "angular": ">= 1.0.8"
   }
 }
