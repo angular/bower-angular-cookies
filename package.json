@@ -1,6 +1,6 @@
 {
   "name": "angular-cookies",
-  "version": "1.4.6-build.4201+sha.770dd2d",
+  "version": "1.4.6-build.4202+sha.6fb90bd",
   "description": "AngularJS module for cookies",
   "main": "index.js",
   "scripts": {
