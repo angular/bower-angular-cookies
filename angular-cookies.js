@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.20-build.148+sha.1f7a0b2
+ * @license AngularJS v1.2.29-build.600+sha.b7eaa95
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -48,7 +48,7 @@ angular.module('ngCookies', ['ng']).
    *   }]);
    * ```
    */
-   factory('$cookies', ['$rootScope', '$browser', function($rootScope, $browser) {
+   factory('$cookies', ['$rootScope', '$browser', function ($rootScope, $browser) {
       var cookies = {},
           lastCookies = {},
           lastBrowserCookies,
@@ -91,12 +91,11 @@ angular.module('ngCookies', ['ng']).
         for (name in lastCookies) {
           if (isUndefined(cookies[name])) {
             $browser.cookies(name, undefined);
-            delete lastCookies[name];
           }
         }
 
         //update all cookies updated in $cookies
-        for (name in cookies) {
+        for(name in cookies) {
           value = cookies[name];
           if (!angular.isString(value)) {
             value = '' + value;
@@ -104,13 +103,13 @@ angular.module('ngCookies', ['ng']).
           }
           if (value !== lastCookies[name]) {
             $browser.cookies(name, value);
-            lastCookies[name] = value;
             updated = true;
           }
         }
 
         //verify what was actually stored
-        if (updated) {
+        if (updated){
+          updated = false;
           browserCookies = $browser.cookies();
 
           for (name in cookies) {
@@ -118,10 +117,10 @@ angular.module('ngCookies', ['ng']).
               //delete or reset all cookies that the browser dropped from $cookies
               if (isUndefined(browserCookies[name])) {
                 delete cookies[name];
-                delete lastCookies[name];
               } else {
-                cookies[name] = lastCookies[name] = browserCookies[name];
+                cookies[name] = browserCookies[name];
               }
+              updated = true;
             }
           }
         }
