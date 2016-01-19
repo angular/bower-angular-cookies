@@ -1,9 +1,9 @@
 {
   "name": "angular-cookies",
-  "version": "1.5.0-build.4523+sha.8d20b04",
+  "version": "1.5.0-build.4524+sha.1137d91",
   "main": "./angular-cookies.js",
   "ignore": [],
   "dependencies": {
-    "angular": "1.5.0-build.4523+sha.8d20b04"
+    "angular": "1.5.0-build.4524+sha.1137d91"
   }
 }
