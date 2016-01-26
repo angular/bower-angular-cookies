@@ -46,6 +46,7 @@ angular.module('ngCookies', ['ng']).
      * - **expires** - `{string|Date}` - String of the form "Wdy, DD Mon YYYY HH:MM:SS GMT"
      *   or a Date object indicating the exact date/time this cookie will expire.
      * - **secure** - `{boolean}` - The cookie will be available only in secured connection.
+     * - **encoding** -- '{boolean}' - The cookie will be encoded in javascript URL encoding.
      *
      * Note: by default the address that appears in your `<base>` tag will be used as path.
      * This is important so that cookies will be visible for all routes in case html5mode is enabled
@@ -286,7 +287,13 @@ function $$CookieWriter($document, $log, $browser) {
       expires = new Date(expires);
     }
 
-    var str = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+    if(options.encoding || angular.isUndefined(options.encoding)) {
+      var str = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+    }
+    else {
+      var str = (name) + '=' + (value);
+    }
+
     str += path ? ';path=' + path : '';
     str += options.domain ? ';domain=' + options.domain : '';
     str += expires ? ';expires=' + expires.toUTCString() : '';
